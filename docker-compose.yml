@@ -1,0 +1,9 @@
+services:
+  ministatus:
+    build: .
+    image: ministatus:1.0.0
+    ports:
+      - "127.0.0.1:5000:5000"
+    environment:
+      APP_VERSION: "1.0.0"
+    restart: unless-stopped
