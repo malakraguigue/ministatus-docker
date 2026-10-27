@@ -14,7 +14,7 @@ jobs:
   build-scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Lint du Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
@@ -79,7 +79,7 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Connexion a Docker Hub
         uses: docker/login-action@v3
